@@ -5,7 +5,8 @@ metadata:
   labels:
     app: arttgcf
   annotations:
-    dev.okteto.com/auto-ingress: "true"services:
+    dev.okteto.com/auto-ingress: "true"
+  services:
   worker:
    build: .
    environment:
