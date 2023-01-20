@@ -6,8 +6,8 @@ metadata:
     app: arttgcf
   annotations:
     dev.okteto.com/auto-ingress: "true"services:
-    worker:
-     build: .
-     environment:
-      PASSWORD: $PASSWORD
+  worker:
+   build: .
+   environment:
+    PASSWORD: $PASSWORD
        
