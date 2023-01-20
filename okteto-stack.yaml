@@ -1,6 +1,7 @@
  public: true
- worker:
-   build: .
+ services:
+    worker:
+     build: .
    environment:
     PASSWORD: $PASSWORD
        
