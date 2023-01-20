@@ -2,7 +2,7 @@
  services:
     arttgct:
     public: true
-     build: .
-   environment:
-    PASSWORD: $PASSWORD
+    build: .
+     environment:
+      PASSWORD: $PASSWORD
        
