@@ -4,4 +4,4 @@ services:
      environment:
       PASSWORD: $PASSWORD
        annotations:
-       dev.okteto.com/generate-host: "true"
+     dev.okteto.com/generate-host: "true"
