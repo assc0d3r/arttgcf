@@ -1,7 +1,8 @@
+annotations:
+  dev.okteto.com/generate-host: "true"
 services:
     worker:
      build: .
      environment:
       PASSWORD: $PASSWORD
-       annotations:
-         dev.okteto.com/generate-host: "true"
+       
