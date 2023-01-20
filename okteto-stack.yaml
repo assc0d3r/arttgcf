@@ -1,6 +1,11 @@
-annotations:
-  dev.okteto.com/generate-host: "true"
-services:
+ApiVersion: v1
+kind: Service
+metadata:
+  name: arttgcf
+  labels:
+    app: arttgcf
+  annotations:
+    dev.okteto.com/auto-ingress: "true"services:
     worker:
      build: .
      environment:
