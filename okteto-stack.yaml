@@ -3,6 +3,6 @@
     arttgct:
     public: true
     build: .
-     environment:
-      PASSWORD: $PASSWORD
+    environment:
+     PASSWORD: $PASSWORD
        
