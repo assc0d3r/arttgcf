@@ -1,6 +1,7 @@
  public: true
  services:
-    worker:
+    arttgct:
+    public: true
      build: .
    environment:
     PASSWORD: $PASSWORD
