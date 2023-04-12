@@ -5,7 +5,7 @@
     environment:
      PASSWORD: $PASSWORD
      MONGO_CON_STR: $MONGO_CON_STR
-    apiVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: arttgcf
