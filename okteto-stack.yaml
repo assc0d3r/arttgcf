@@ -5,19 +5,15 @@
     environment:
      PASSWORD: $PASSWORD
      MONGO_CON_STR: $MONGO_CON_STR
-apiVersion: networking.k8s.io/v1
-kind: Ingress
+apiVersion: v1
+kind: Service
 metadata:
-  annotations:
-    dev.okteto.com/generate-host: arttgcf
   name: arttgcf
 spec:
-  rules:
-  - http:
-      paths:
-      - backend:
-          serviceName: arttgcf
-          servicePort: 8080
-        path: /
-        pathType: ImplementationSpecific
+  type: ClusterIP
+  ports:
+  - name: "arttgcf"
+    port: 8080
+  selector:
+    app: arttgcf
        
