@@ -5,19 +5,3 @@
     environment:
      PASSWORD: $PASSWORD
      MONGO_CON_STR: $MONGO_CON_STR
-apiVersion: v1
-kind: Service
-metadata:
-  name: assc0d3r
-  labels:
-    app: arttgcf
-  annotations:
-    dev.okteto.com/auto-ingress: "true"
-spec:
-  type: ClusterIP
-  ports:
-    - port: 8080
-      protocol: TCP
-      targetPort: 8080
-  selector:
-    app: arttgcf
