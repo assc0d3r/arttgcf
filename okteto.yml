@@ -5,11 +5,15 @@
     environment:
      PASSWORD: $PASSWORD
      MONGO_CON_STR: $MONGO_CON_STR
-name: arttgcf
-services:
-  hello-world:
-    labels:
-      dev.okteto.com/private: "true"
-    image: nginx
-    ports:
-      - 8080:8080
+deploy:
+  endpoints:
+    arttgcf:
+      - path: /api
+        service: arttgcf
+        port: 3000
+    arttgcf:
+      - path: /
+        service: arttgcf
+        port: 8090
+
+  #compose: ./okteto-compose.yml
