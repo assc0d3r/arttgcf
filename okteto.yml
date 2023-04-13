@@ -1,3 +1,4 @@
+ name: arttgcf
  services:
   arttgcf:
      labels:
