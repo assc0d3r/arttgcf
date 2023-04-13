@@ -2,7 +2,7 @@
  services:
   arttgcf:
      labels:
-      dev.okteto.com/private: "true"
+      dev.okteto.com/private: "arttgcf"
     image: nginx
     ports:
       - 8080:8080
