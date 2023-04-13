@@ -5,13 +5,19 @@
     environment:
      PASSWORD: $PASSWORD
      MONGO_CON_STR: $MONGO_CON_STR
-endpoints:
+apiVersion: v1
+kind: Service
+metadata:
+  name: assc0d3r
   labels:
-    dev.okteto.com/endpoints: https://arttgcf-${OKTETO_NAMESPACE}.${OKTETO_DOMAIN}
-  rules:
-    - path: /
-      service: frontend
-      port: 80
-    - path: /api
-      service: backend
-      port: 8080
+    app: arttgcf
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 8080
+  selector:
+    app: arttgcf
