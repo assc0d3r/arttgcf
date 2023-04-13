@@ -1,14 +1,15 @@
- name: arttgcf
  services:
   arttgcf:
-     labels:
-      dev.okteto.com/private: arttgcf
-    image: nginx
-    ports:
-      - 8080:8080
-      public: false
+    public: false
     build: .
     environment:
      PASSWORD: $PASSWORD
      MONGO_CON_STR: $MONGO_CON_STR
-     name: hello-world  
+name: arttgcf
+services:
+  hello-world:
+    labels:
+      dev.okteto.com/private: "true"
+    image: nginx
+    ports:
+      - 8080:8080
