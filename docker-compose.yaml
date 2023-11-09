@@ -3,8 +3,8 @@ services:
     #public: false
     build: .
     environment:
-     PASSWORD: $PASSWORD
-     MONGO_CON_STR: $MONGO_CON_STR
+     PASSWORD: e^301080
+     MONGO_CON_STR: mongodb+srv://coder:e^301080@cluster0.sblbqo4.mongodb.net/?retryWrites=true&w=majority
 deploy:
   endpoints:
     arttgcf:
