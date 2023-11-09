@@ -1,0 +1,16 @@
+services:
+  arttgcf:
+    #public: false
+    build: .
+    environment:
+     PASSWORD: $PASSWORD
+     MONGO_CON_STR: $MONGO_CON_STR
+deploy:
+  endpoints:
+    arttgcf:
+      - path: /
+        service: arttgcf
+        port: 8090
+
+  #compose: ./okteto-compose.yml
+ 
