@@ -1,1 +1,1 @@
-gunicorn app:app & python3 tgcf live -l
+gunicorn app:app & python3 live.py -l
