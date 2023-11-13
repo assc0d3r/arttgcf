@@ -16,15 +16,5 @@ RUN pip3 install gunicorn==20.1.0
 RUN poetry build && \
     /venv/bin/pip install --upgrade pip wheel setuptools &&\
     /venv/bin/pip install dist/*.whl
-EXPOSE 8501
-from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'ikx7a'
-
-
-if __name__ == "__main__":
-    app.run()    
+EXPOSE 8501 
 CMD tgcf live -l
