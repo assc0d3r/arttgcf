@@ -7,11 +7,7 @@ services:
      MONGO_CON_STR: mongodb+srv://coder:e^301080@cluster0.sblbqo4.mongodb.net/?retryWrites=true&w=majority
      deploy:
   endpoints:
-    arttgcf:
-      - path: /api
-        service: arttgcf
-        port: 3000
-    arttgcf:
+     arttgcf:
       - path: /
         service: arttgcf
         port: 8090
