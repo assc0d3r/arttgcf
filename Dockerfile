@@ -2,9 +2,6 @@ FROM python:3.10
 ENV VENV_PATH="/venv"
 ENV PATH="$VENV_PATH/bin:$PATH"
 WORKDIR /app
-RUN pip3 install -U pip
-COPY requirements.txt
-RUN pip3 install -U -r requirements.txt
 RUN apt-get update && \
     apt-get install -y --no-install-recommends apt-utils && \
     apt-get upgrade -y && \
