@@ -10,9 +10,8 @@ RUN apt-get update && \
 RUN pip install --upgrade poetry
 RUN python -m venv /venv
 COPY . .
-RUN pip3 install -U pip
-COPY requirements.txt
-RUN pip3 install -U -r requirements.txt
+RUN pip3 install Flask==2.2.2
+RUN pip3 install gunicorn==20.1.0
 RUN poetry build && \
     /venv/bin/pip install --upgrade pip wheel setuptools &&\
     /venv/bin/pip install dist/*.whl
