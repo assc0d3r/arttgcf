@@ -10,6 +10,7 @@ RUN apt-get update && \
 RUN pip install --upgrade poetry
 RUN python -m venv /venv
 COPY . .
+COPY app.py /app/app.py
 RUN pip3 install Flask==2.2.2
 RUN pip3 install gunicorn==20.1.0
 RUN poetry build && \
