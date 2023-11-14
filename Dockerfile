@@ -17,6 +17,4 @@ RUN poetry build && \
     /venv/bin/pip install --upgrade pip wheel setuptools &&\
     /venv/bin/pip install dist/*.whl
 EXPOSE 8501 
-COPY start.sh /start.sh
-CMD ["/bin/bash", "/start.sh"]
-#CMD tgcf live -l
+CMD tgcf live -l
